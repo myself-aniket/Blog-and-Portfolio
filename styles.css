@@ -1,0 +1,192 @@
+/* General styling for dark theme */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #ddd;
+    background-color: #121212;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+nav {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 1rem 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+}
+
+.section {
+    padding: 100px 5%; /* Reduces padding for better responsiveness */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Alternating background colors for sections */
+#home {
+    background-color: #000;
+}
+
+#portfolio {
+    background-color: #2a2a2a;
+}
+
+#blog {
+    background-color: #000;
+    color: #fff;
+}
+
+#about {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+#contact {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Home section styling */
+.subtitle {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.name-box {
+    border: 2px solid #ff4081; /* Border around the name */
+    padding: 2.0rem 3.5rem;
+    display: inline-block;
+    
+    margin-bottom: 1.5rem;
+    letter-spacing: 10px;
+}
+
+.name {
+    font-size: 2rem;
+    color: #ff4081; /* Name color */
+    margin: 0;
+}
+
+.description {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+    overflow: hidden; /* Hides overflow if text is too long */
+    text-overflow: ellipsis; /* Adds "..." at the end if the text overflows */
+    
+}
+
+.bio {
+    color: #999;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.6;
+    
+    
+    white-space: nowrap;
+    /* overflow: hidden; Hides overflow if text is too long */
+    text-overflow: ellipsis; /* Adds "..." at the end if the text overflows */
+}
+
+
+/* Navigation Button Styling */
+.nav-btn {
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    font-style: inherit;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff;
+    width: 100px;
+    height: 50px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    margin: auto;
+}
+
+.nav-btn:hover {
+    background: #ff4081;
+    border-color: #ff4081;
+}
+
+/* Contact section button styling */
+.explore-btn {
+    padding: 1.0rem 3rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+
+.explore-btn:hover {
+    background: #ff4081;
+    color: #fff;
+    border-color: #ff4081;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem; /* Smaller gap between nav items */
+    }
+
+    .section {
+        padding: 80px 3%; /* Reduce padding on smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Slightly smaller font for nav items */
+    }
+}
